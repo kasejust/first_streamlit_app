@@ -17,7 +17,7 @@ streamlit.write('Thanks for adding ', add_my_fruit)
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 #streamlit.dataframe(fruityvice_normalized)
-my_cur.execute("insert into FRUIT_LOAD_LIST values(add_my_fruit)")
+my_cur.execute("insert into FRUIT_LOAD_LIST values('from streamlit')")
 
 
 
