@@ -75,6 +75,7 @@ try:
   if not add_my_fruit:
     streamlit.error("Please select a fruit to add")
   else:
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     back_from_function = insert_row_snowflake(add_my_fruit)
     streamlit.text(back_from_function)
 except URLError as e:
